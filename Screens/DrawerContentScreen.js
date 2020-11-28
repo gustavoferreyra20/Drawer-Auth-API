@@ -5,14 +5,6 @@ import { Icon } from 'react-native-elements'
 
 export class DrawerContentScreen extends Component {
 
-    handlerConfiguration(){
-        console.log("Configuration");
-    }
-
-    handlerLogout(){
-        console.log("Logout");
-    }
-
     render(){
 
         return(
@@ -25,22 +17,17 @@ export class DrawerContentScreen extends Component {
                             onPress={() => this.props.navigation.navigate("Home")}
                         />
                         <DrawerItem 
-                            icon={() => <Icon type="material-community" name="calendar" style={styles.icon}/>}
-                            label="Info"
-                            onPress={() => this.props.navigation.navigate("Info")}
+                            icon={() => <Icon type="ant-design" name="meh" style={styles.icon}/>}
+                            label="Bored"
+                            onPress={() => this.props.navigation.navigate("Bored")}
                         />
                     </View>
                 </DrawerContentScrollView>
                 <View style={styles.bottomDrawer}>
                     <DrawerItem 
-                        icon={() => <Icon type="material-community" name="cogs" style={styles.icon}/>}
-                        label="Configuration"
-                        onPress={() => this.handlerConfiguration()}
-                    />
-                    <DrawerItem 
                         icon={() => <Icon type="material-community" name="logout" style={styles.icon}/>}
                         label="Logout"
-                        onPress={() => this.handlerLogout()}
+                        onPress={() => this.props.onLogout()}
                     />
                 </View>
             </View>

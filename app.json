@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "bp-DrawerNavigator-RN",
-    "slug": "bp-DrawerNavigator-RN",
+    "name": "Drawer-Auth-API",
+    "slug": "Drawer-Auth-API",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

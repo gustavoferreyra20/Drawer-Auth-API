@@ -7,7 +7,8 @@ export class HomeScreen extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <Text>This is the home screen</Text>
+                <Text>Bienvenido! </Text>
+                <Text>Abre el menú para seleccionar la API.</Text>
                 <StatusBar style="auto" />
             </View>
         );

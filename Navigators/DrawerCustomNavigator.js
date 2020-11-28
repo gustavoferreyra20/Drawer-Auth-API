@@ -1,12 +1,12 @@
 
 import React, {Component} from "react";
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import {Button} from 'react-native';
 
 // Screens
 import {HomeScreen} from "../Screens/HomeScreen";
-import {InfoScreen} from "../Screens/InfoScreen";
+import {BoredScreen} from "../Screens/BoredScreen";
 import {DrawerContentScreen} from "../Screens/DrawerContentScreen";
-console.log(HomeScreen, InfoScreen);
 
 const Drawer = createDrawerNavigator();
 
@@ -17,10 +17,10 @@ export class DrawerCustomNavigator extends Component {
             <Drawer.Navigator 
                 initialRouteName="Home"
                 headerMode={'none'}
-                drawerContent={props => <DrawerContentScreen {...props}/>}
+                drawerContent={props => <DrawerContentScreen  onLogout={() => this.props.onLogout()}{...props} />}
             >
                 <Drawer.Screen name="Home" component={HomeScreen} />
-                <Drawer.Screen name="Info" component={InfoScreen} />
+                <Drawer.Screen name="Bored" component={BoredScreen} />
             </Drawer.Navigator>
         );
     }
